@@ -50,8 +50,7 @@ if (isNaN(userAge)) {
     r = Math.floor(Math.random() * MESSAGE_FALSE.length);
     message = MESSAGE_FALSE[r]
 } else {
-    r = Math.floor(Math.random() * MESSAGE_TRUE.length);
-    message = MESSAGE_TRUE[r]
+
 };
 
 let jedi = document.getElementById('jedi')
