@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header {
+    background-image: url(images/back.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+header h1 {
+    padding-left: 50px;
+    font-size: 70px;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+main section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+main section div {
+    height: 300px;
+    width: 250px;
+    border: 1px solid goldenrod;
+    padding: 10px;
+    margin: 20px;
+}
+main section div p img {
+    width: 100%;
+}
+main section .VIP {
+    background-color: chocolate;
+}
