@@ -7,9 +7,14 @@ body {
     background-size: cover;    
 }
 
+main section button {
+    background-color: blueviolet;
+}
+
+/* --- Modal --- */
 .modal-help {
+    position: fixed;    
     width: 100%;
-    position: fixed;
     height: 100vh;
     top: 0px;
     left: 0px;
