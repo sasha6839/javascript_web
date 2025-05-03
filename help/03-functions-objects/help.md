@@ -237,3 +237,4 @@ console.log(Object.entries(user));
 
 # Завдання
 
+![funko](funko.png)
