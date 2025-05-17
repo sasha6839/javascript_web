@@ -4,7 +4,7 @@
 }
 body {
     background-image: url('images/main_back.jpg');
-    background-size: cover;
+    background-size: cover;    
 }
 main {
     height: 100vh;
@@ -13,13 +13,26 @@ main {
     justify-content: center;
     flex-direction: column;
 }
+h1 {
+    text-shadow: 0 0 4px black;
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+}
+main p {
+    color: white;
+    background-color: rgba(0,0,0, 0.4);
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 600px;
+}
 .grid {
     width: 600px;
     height: 600px;
     border: 1px solid green;
     display: flex;
     flex-wrap: wrap;
-    background-image: url('images/game_back.jpg')
+    background-image: url('images/game_back.jpg');
 }
 .grid div {
     width: 40px;
@@ -28,6 +41,12 @@ main {
 .bomb {
     background-image: url('images/bomb.png');
 }
+.boob {
+    background-image: url('images/boob.png');
+}
 .shooter {
     background-image: url('images/shooter.png');
+}
+.shoot {
+    background-image: url('images/boom.png');
 }
