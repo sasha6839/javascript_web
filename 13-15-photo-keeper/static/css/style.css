@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-image: linear-gradient(to right,
+    #16222A 0%, #3A6073 51%, #16222A 100%);
+}
+
+header {
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    background-image: url(../img/main_back.png);
+    background-repeat: no-repeat;
+    background-position: top 50px left 50px;
+    margin-right: 80px;
+}
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    color: white;
+    padding: 30px;
+}
+
+.menuContainer {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 80px;
+    height: 100%;
+    background-color: rgb(12, 106, 121);
+    z-index: 100;
+}
+
+.menuTriger {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    display: flex;
+    justify-content:
+}
+
+.menuTrigerLines {
+    position: relative;
+}
+.menuTrigerLines,
+.menuTrigerLines::before,
+.menuTrigerLines::after {
+    width: 40px;
+    height: 3px;
+    background-color: rgb(255, 0, 0);
+}
+.menuTrigerLines::before {
+    content: '';
+    position:absolute;
+    top: -12px;
+    right: 0;
+}
+.menuTrigerLines::after {
+    content: '';
+    position:absolute;
+    top: -12px;
+    right: 0;
+}
+
+header nav {
+    display: none;
+}

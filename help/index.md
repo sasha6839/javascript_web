@@ -12,6 +12,7 @@
 8.  [Власна гра](08-quizizz-own-game/help.md)
 9.  [Canvas в html5](09-canvas/help.md)
 10. [Класи](10-class/help.md)
+13. [Класи](13-/help.md)
 
 
 <br>
