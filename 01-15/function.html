@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions-JS</title>
+</head>
+<body>
+    <h1>Functions in JavaScript</h1>
+
+    <script>
+        function myFunction() {
+            console.log("Hello from myFunction!");
+        }
+
+        myFunction();
+
+        function greet(name = "Guest") {
+            console.log("Hello, " + name + "!");
+        }
+        greet();
+        greet("Bob");
+        greet("Charlie");
+
+        function sum(...numbers) {
+            return numbers.reduce((total, num) => total + num, 0);
+        }
+
+        console.log(sum(1, 2, 3, 6)); // 6
+
+    </script>
+</body>
+</html>
