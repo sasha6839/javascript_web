@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk-UA">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,97 @@
     <link rel="stylesheet" href="../static/css/style.css">
     <title>PhotoKeeper</title>
 </head>
-<body>
-    <header>
-        <div class="menuContainer">
-            <div clas="menuTriger">
-                <div class="menuTrigerLines"></div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="">   Home   </a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Favorites      Add</a></li>
-                    <li><a href="">Settings</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="headerContentContainer">
-            <h1>PhotoKeeper</h1>
-            <div>
-                <form action="">
 
-                </form>
-            </div>
-        </div>
-    </header>
+<body>
+	<header>
+		<div class="mainMenuContainer">
+			<div class="menuTrigger">
+				<div class="menuTriggerLines"></div>
+			</div>
+			<nav class="mainMenu">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Favorites</a></li>
+					<li><a href="#">Settings</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="headerContentContainer">
+			<h1>PhotoKeeper</h1>
+			<div>
+				<form action="http://127.0.0.1:5000/upload/photo" autocomplete="off" class="uploadForm"
+					enctype="multipart/form-data" id="upload-select-image" method="post">
+					<div>
+						<input type="file" name="file" id="inputUploadFile" class="hidden">
+						<label for="inputUploadFile"><img src="../static/img/camera.png" class="camaraButton"></label>
+					</div>
+					<div class="uploadImageOverlay hidden">
+						<div class="uploadImageSettingsContainer">
+							<div>
+								<img src="" class="uploadImage">
+							</div>
+
+							<div>
+								<button class="uploadFormButton active" type="reset" id="uploadCancel">ВІДМІНА</button>
+								<button class="uploadFormButton" type="submit" id="uploadSubmit" disabled>ВІДПРАВИТИ</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<p class="headerComment">Find something special</p>
+		</div>
+	</header>
+
+	<main>
+		<section class="picturesContainer"></section>
+
+		<section class="openedPictureContainer hidden">
+			<div class="openedPicture">
+				<img src="../static/img/close.png" class="closeButton">
+				<img src="" class="openedPictureImg">
+				<div class="openedPictureDescription">
+					<div class="descriptionText"></div>
+					<div class="openedPictureStatus">
+						<img src="../static/img/comment.png">
+						<span class="pictureComments"></span>
+						<img src="../static/img/heart.png">
+						<span class="pictureStars"></span>
+					</div>
+				</div>
+				<div class="pictureCommentsContainer"></div>
+			</div>
+		</section>
+	</main>
+
+    <footer>
+        <p>PhotoKeeper &copy; 2025</p>
+        <p>tel: +1 234 567 890</p>
+        <p>email: email@com</p>
+    </footer>
+
+	<template id="templatePictureExample">
+		<div class="pictureExample">
+			<img src="" class="pictureImg">
+			<div class="pictureStatus">
+				<img src="../static/img/comment.png">
+				<span class="pictureComments"></span>
+				<img src="../static/img/heart_checked.png">
+				<span class="pictureStars"></span>
+			</div>
+		</div>
+	</template>
+
+	<template id="commentTemplate">
+		<div class="commentBlock">
+			<p class="commentText"></p>
+			<p class="commentAuthor">Anonymous</p>
+		</div>
+	</template>
 
     <script src="../static/js/pk.js"></script>
 </body>
+
 </html>
