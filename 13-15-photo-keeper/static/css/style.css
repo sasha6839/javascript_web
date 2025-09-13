@@ -14,11 +14,7 @@ body {
 	display: none;
 }
 
-
 /* ========== HEADER STYLES ========== */
-
-/* TODO: --- змінити меню --- */
-
 header {
 	height: 600px;
 	display: flex;

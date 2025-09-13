@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="uk-UA">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/normalize.css">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <title>PhotoKeeper</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../static/css/style.css">
+	<title>PhotoKeeper</title>
 </head>
 
 <body>
@@ -28,27 +26,32 @@
 		<div class="headerContentContainer">
 			<h1>PhotoKeeper</h1>
 			<div>
-				<form action="http://127.0.0.1:5000/upload/photo" autocomplete="off" class="uploadForm"
-					enctype="multipart/form-data" id="upload-select-image" method="post">
+				<form>
 					<div>
 						<input type="file" name="file" id="inputUploadFile" class="hidden">
-						<label for="inputUploadFile"><img src="../static/img/camera.png" class="camaraButton"></label>
+						<label for="inputUploadFile">
+							<img src="../static/img/camara.png" class="camaraButton">
+						</label>
 					</div>
+					<!-- TODO -->
 					<div class="uploadImageOverlay hidden">
 						<div class="uploadImageSettingsContainer">
 							<div>
 								<img src="" class="uploadImage">
 							</div>
 
+							<fieldset class="uploadEffectFieldset"></fieldset>
+
 							<div>
 								<button class="uploadFormButton active" type="reset" id="uploadCancel">ВІДМІНА</button>
-								<button class="uploadFormButton" type="submit" id="uploadSubmit" disabled>ВІДПРАВИТИ</button>
+								<button class="uploadFormButton" type="submit" id="uploadSubmit"
+									disabled>ВІДПРАВИТИ</button>
 							</div>
 						</div>
 					</div>
 				</form>
 			</div>
-			<p class="headerComment">Find something special</p>
+			<p class="headerComment">Знайдіть щось особливе</p>
 		</div>
 	</header>
 
@@ -68,16 +71,18 @@
 						<span class="pictureStars"></span>
 					</div>
 				</div>
+
 				<div class="pictureCommentsContainer"></div>
 			</div>
 		</section>
+
 	</main>
 
-    <footer>
-        <p>PhotoKeeper &copy; 2025</p>
-        <p>tel: +1 234 567 890</p>
-        <p>email: email@com</p>
-    </footer>
+	<footer>
+		<p>PhotoKeeper 2025</p>
+		<p>tel: 0 - 800 - 907 - 44</p>
+		<p>e-mail: info@photokeeper.com</p>
+	</footer>
 
 	<template id="templatePictureExample">
 		<div class="pictureExample">
@@ -98,7 +103,7 @@
 		</div>
 	</template>
 
-    <script src="../static/js/pk.js"></script>
+	<script src="../static/js/pk.js"></script>
 </body>
 
 </html>

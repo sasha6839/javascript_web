@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Ponomar&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url(images/back.jpg);
+	background-size: cover;
+	font-family: 'Ponomar', sans-serif;
+	color: white;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+h1 {
+	text-shadow: 2px 2px 5px black;
+	font-family: 'Ponomar', sans-serif;
+	margin-bottom: 20px;
+}
+
+main {
+	margin-left: 150px;
+	margin-right: 150px;
+	padding: 60px;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+main div {
+	background-color: rgba(250, 250, 250, 0.8);
+	border: 2px solid black;
+}
+
+#canvas {
+	width: 800px;
+	height: 400px;
+	margin: 0;
+    padding: 0;
+    display: block;
+}

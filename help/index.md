@@ -11,8 +11,11 @@
 7.  [Гра аркада](07-shooter-game/help.md)
 8.  [Власна гра](08-quizizz-own-game/help.md)
 9.  [Canvas в html5](09-canvas/help.md)
-10. [Класи](10-class/help.md)
-13. [Класи](13-/help.md)
+10. [Класи](10-11-class-game/help.md)
+11. [Тестування](12-quizizz/help.md)
+12. [Фотографії-проект](13-15-photo-keeperhelp.md)
+13. [Тестування](16-quizizz/help.md)
+14. [JavaScript-Pytnon](17-19-photo-keeper-python/help.md)
 
 
 <br>
