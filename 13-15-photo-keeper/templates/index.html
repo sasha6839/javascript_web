@@ -40,8 +40,49 @@
 								<img src="" class="uploadImage">
 							</div>
 
-							<fieldset class="uploadEffectFieldset"></fieldset>
+							<div class="uploadEffectLevel">
+								<input type="range" class="hidden" min="0" max="300" value="0" step="1" id="uploadEffectLevel">
+								<label for="effectLevel">
+									<div id="effectLevelLine" class="effectLevelLine">
+										<div class="effectLevelPin"></div>
+										<div class="effectLevelProgressLine"></div>
+									</div>
+								</label>
+							</div>
 
+							<fieldset class="uploadEffectFieldset">
+								<input type="radio" name="effect" id="uploadEffectNone" value="none" class="hidden" checked>
+								<label for="uploadEffectNone" class="uploadEffectLabel" title="Без ефекту">
+									<div class="uploadEffectPreview"></div>
+								</label>
+
+								<input type="radio" name="effect" id="uploadEffectSepia" value="sepia" class="hidden">
+								<label for="uploadEffectSepia" class="uploadEffectLabel" title="Сепія">
+									<div class="uploadEffectPreview sepia"></div>
+								</label>
+
+								<input type="radio" name="effect" id="uploadEffectMarvin" value="marvin" class="hidden">
+								<label for="uploadEffectMarvin" class="uploadEffectLabel" title="Марвін">
+									<div class="uploadEffectPreview marvin"></div>
+								</label>
+
+								<input type="radio" name="effect" id="uploadEffectPhobos" value="phobos" class="hidden">
+								<label for="uploadEffectPhobos" class="uploadEffectLabel" title="Фобос">
+									<div class="uploadEffectPreview phobos"></div>
+								</label>
+
+								<input type="radio" name="effect" id="uploadEffectSaturate" value="saturate" class="hidden">
+								<label for="uploadEffectSaturate" class="uploadEffectLabel" title="Насиченість">
+									<div class="uploadEffectPreview saturate"></div>
+								</label>
+
+								<!-- contrast -->
+								<input type="radio" name="effect" id="uploadEffectContrast" value="contrast" class="hidden">
+								<label for="uploadEffectContrast" class="uploadEffectLabel" title="Контрастність">
+									<div class="uploadEffectPreview contrast"></div>
+								</label>
+							</fieldset>
+							
 							<div>
 								<button class="uploadFormButton active" type="reset" id="uploadCancel">ВІДМІНА</button>
 								<button class="uploadFormButton" type="submit" id="uploadSubmit"
@@ -75,7 +116,7 @@
 				<div class="pictureCommentsContainer"></div>
 			</div>
 		</section>
-
+		
 	</main>
 
 	<footer>

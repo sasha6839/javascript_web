@@ -136,9 +136,54 @@ class PhotoGallery{
 
 }
 
+class ImageUploader{
+    constructor(){     
+        this.inputUploadFile = document.getElementById('inputUploadFile');
+        this.uploadImageOverlay = document.querySelector('.uploadImageOverlay');
+        this.uploadedImage = document.querySelector('.uploadImage');
+        this.uploadEffectFieldset = document.querySelector('.uploadEffectFieldset');
+        this.buttonCloseUpload = document.getElementById('uploadCancel');
+
+        this.currentEffect = 'none';
+        this.initEventListeners()
+    }
+
+    initEventListeners(){
+        this.inputUploadFile.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file && file.type.includes('image')) {
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = () => {
+                    this.uploadedImage.src = reader.result;
+                    
+                    const labelEffectSettings =
+                        this.uploadEffectFieldset.querySelector('.uploadEffectSettingsLabel');
+                    
+                    labelEffectSettings.forEach( (label) => {
+                        label.style.backgroundImage = `url(${reader.result})`;
+                    });
+                    this.uploadImageOverlay.classList.remove('hidden');
+                };
+            }
+        });
+
+        this.buttonCloseUpload.addEventListener('click', (e) => {
+            this.uploadImageOverlay.classList.add('hidden');
+
+        });
+
+        this.uploadEffectFieldset.addEventListener('change', (e) => {
+            // TODO: apply effect to the image
+        });
+    }
+
+}
+
 
 document.addEventListener('DOMContentLoaded', ()=>{
-    new MainMenu('.menuTrigger', '.mainMenuContainer')    
+    new MainMenu('.menuTrigger', '.mainMenuContainer')
+    new ImageUploader()
     const gallery = new PhotoGallery
     gallery.showPictures();
 });
