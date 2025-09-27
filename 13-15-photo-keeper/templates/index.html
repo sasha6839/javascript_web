@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="../static/css/style.css">
-	<title>PhotoKeeper</title>
+	<title>Хранитель фотографій</title>
 </head>
 
 <body>
@@ -15,16 +15,16 @@
 			</div>
 			<nav class="mainMenu">
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Favorites</a></li>
-					<li><a href="#">Settings</a></li>
+					<li><a href="#">Домашня</a></li>
+					<li><a href="#">Про мене</a></li>
+					<li><a href="#">Улюблені</a></li>
+					<li><a href="#">Налаштування</a></li>
 				</ul>
 			</nav>
 		</div>
 
 		<div class="headerContentContainer">
-			<h1>PhotoKeeper</h1>
+			<h1>Хранитель фотографій</h1>
 			<div>
 				<form>
 					<div>
@@ -33,56 +33,41 @@
 							<img src="../static/img/camara.png" class="camaraButton">
 						</label>
 					</div>
-					<!-- TODO -->
 					<div class="uploadImageOverlay hidden">
 						<div class="uploadImageSettingsContainer">
-							<div>
-								<img src="" class="uploadImage">
-							</div>
+							<div><img src="" class="uploadImage"></div>
 
 							<div class="uploadEffectLevel">
-								<input type="range" class="hidden" min="0" max="300" value="0" step="1" id="uploadEffectLevel">
-								<label for="effectLevel">
-									<div id="effectLevelLine" class="effectLevelLine">
-										<div class="effectLevelPin"></div>
-										<div class="effectLevelProgressLine"></div>
-									</div>
-								</label>
+								<input type="range" class="input-effect" min="0" max="300" value="0" step="1" id="effectLevel">
 							</div>
 
 							<fieldset class="uploadEffectFieldset">
 								<input type="radio" name="effect" id="uploadEffectNone" value="none" class="hidden" checked>
-								<label for="uploadEffectNone" class="uploadEffectLabel" title="Без ефекту">
+								<label for="uploadEffectNone" class="uploadEffectLabel inputActive" title="Без ефектів">
 									<div class="uploadEffectPreview"></div>
 								</label>
-
-								<input type="radio" name="effect" id="uploadEffectSepia" value="sepia" class="hidden">
-								<label for="uploadEffectSepia" class="uploadEffectLabel" title="Сепія">
+								<input type="radio" name="effect" id="uploadEffectChrome" value="sepia" class="hidden">
+								<label for="uploadEffectChrome" class="uploadEffectLabel" title="Сепія">
 									<div class="uploadEffectPreview sepia"></div>
 								</label>
-
-								<input type="radio" name="effect" id="uploadEffectMarvin" value="marvin" class="hidden">
-								<label for="uploadEffectMarvin" class="uploadEffectLabel" title="Марвін">
-									<div class="uploadEffectPreview marvin"></div>
+								<input type="radio" name="effect" id="uploadEffectSepia" value="grayscale" class="hidden">
+								<label for="uploadEffectSepia" class="uploadEffectLabel" title="Чорно-білий">
+									<div class="uploadEffectPreview grayscale"></div>
 								</label>
-
-								<input type="radio" name="effect" id="uploadEffectPhobos" value="phobos" class="hidden">
-								<label for="uploadEffectPhobos" class="uploadEffectLabel" title="Фобос">
-									<div class="uploadEffectPreview phobos"></div>
+								<input type="radio" name="effect" id="uploadEffectMarvin" value="invert" class="hidden">
+								<label for="uploadEffectMarvin" class="uploadEffectLabel" title="Інверсія">
+									<div class="uploadEffectPreview invert"></div>
 								</label>
-
-								<input type="radio" name="effect" id="uploadEffectSaturate" value="saturate" class="hidden">
-								<label for="uploadEffectSaturate" class="uploadEffectLabel" title="Насиченість">
+								<input type="radio" name="effect" id="uploadEffectPhobos" value="saturate" class="hidden">
+								<label for="uploadEffectPhobos" class="uploadEffectLabel" title="Насиченість">
 									<div class="uploadEffectPreview saturate"></div>
 								</label>
-
-								<!-- contrast -->
-								<input type="radio" name="effect" id="uploadEffectContrast" value="contrast" class="hidden">
-								<label for="uploadEffectContrast" class="uploadEffectLabel" title="Контрастність">
+								<input type="radio" name="effect" id="uploadEffectHeat" value="contrast" class="hidden">
+								<label for="uploadEffectHeat" class="uploadEffectLabel" title="Контрастність">
 									<div class="uploadEffectPreview contrast"></div>
 								</label>
 							</fieldset>
-							
+
 							<div>
 								<button class="uploadFormButton active" type="reset" id="uploadCancel">ВІДМІНА</button>
 								<button class="uploadFormButton" type="submit" id="uploadSubmit"
@@ -102,26 +87,26 @@
 		<section class="openedPictureContainer hidden">
 			<div class="openedPicture">
 				<img src="../static/img/close.png" class="closeButton">
-				<img src="" class="openedPictureImg">
+				
+				<img src="??????" class="openedPictureImg">
 				<div class="openedPictureDescription">
-					<div class="descriptionText"></div>
+					<div class="descriptionText">??????</div>
 					<div class="openedPictureStatus">
 						<img src="../static/img/comment.png">
-						<span class="pictureComments"></span>
+						<span class="pictureComments">??????</span>
 						<img src="../static/img/heart.png">
-						<span class="pictureStars"></span>
+						<span class="pictureStars">??????</span>
 					</div>
+					
 				</div>
-
-				<div class="pictureCommentsContainer"></div>
+				<div class="pictureCommentsContainer">??????</div>
 			</div>
 		</section>
-		
 	</main>
 
 	<footer>
-		<p>PhotoKeeper 2025</p>
-		<p>tel: 0 - 800 - 907 - 44</p>
+		<p>Хранитель фотографій 2025</p>
+		<p>Тел: 0 - 800 - 907 - 44</p>
 		<p>e-mail: info@photokeeper.com</p>
 	</footer>
 
@@ -139,8 +124,8 @@
 
 	<template id="commentTemplate">
 		<div class="commentBlock">
-			<p class="commentText"></p>
-			<p class="commentAuthor">Anonymous</p>
+			<p class="commentText">??????</p>
+			<p class="commentAuthor">Невідомий</p>
 		</div>
 	</template>
 
