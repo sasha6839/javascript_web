@@ -26,7 +26,13 @@
 		<div class="headerContentContainer">
 			<h1>Хранитель фотографій</h1>
 			<div>
-				<form>
+				<form
+					id="uploadForm"
+					enctype="multipart/form-data"
+					method="POST"
+					action="/upload/photo"
+					class="uploadForm"
+					autocomplete="off">
 					<div>
 						<input type="file" name="file" id="inputUploadFile" class="hidden">
 						<label for="inputUploadFile">
@@ -38,7 +44,7 @@
 							<div><img src="" class="uploadImage"></div>
 
 							<div class="uploadEffectLevel">
-								<input type="range" class="input-effect" min="0" max="300" value="0" step="1" id="effectLevel">
+								<input type="range" name="effectLevel" class="input-effect" min="0" max="300" value="0" step="1" id="effectLevel">
 							</div>
 
 							<fieldset class="uploadEffectFieldset">
